@@ -1,0 +1,201 @@
+.genre-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Filter Section Styles */
+.filter-section {
+    margin-bottom: 2rem;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.genre-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #ff6b6b;
+    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+}
+
+/* Comic Section Styles */
+.comic-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.time-filter-container {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.time-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-select:hover {
+    border-color: #ff6b6b;
+}
+
+.time-select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+/* Custom Year Input Styles */
+.custom-year-input {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.custom-year-input input {
+    width: 150px;
+    padding: 8px 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.custom-year-input input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+.apply-year-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.apply-year-btn:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+/* Comic Grid Styles */
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.comic-card {
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 300px;
+    width: 200px;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+}
+
+.comic-card img {
+    object-fit: cover;
+}
+
+.comic-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+}
+
+.comic-title span {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tags {
+    color: #ff6b6b;
+}
+
+.no-results, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .genre-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .time-filter-container {
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .comic-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+} 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="http://localhost/mangup/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Komik - MangUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/genre.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">MangUp</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="genre.html">Semua Komik</a></li>
+                <li><a href="#">Random</a></li>
+            </ul>
+        </nav>
+
+        <!-- Search bar -->
+        <div class="search-bar">
+            <form action="searchcln.html" method="get">
+                <input type="text" id="searchInput" name="q" placeholder="Cari komik...">
+            </form>
+        </div>
+    </header>
+
+    <!-- Konten utama -->
+    <main class="container">
+        <div class="genre-container">
+            <h1 class="page-title">Semua Komik</h1>
+
+            <!-- Di dalam .filter-section -->
+            <div class="filter-section">
+                <div class="genre-filters" id="genreFiltersContainer">
+                    <button class="filter-btn active" data-genre="all">Semua</button>
+                    <!-- Tombol genre akan diisi oleh JavaScript -->
+                </div>
+            </div>
+
+            <!-- Comic Grid with Time Filter -->
+            <div class="comic-section">
+                <div class="time-filter-container">
+                    <select id="timeFilter" class="time-select">
+                        <option value="all">Semua Waktu</option>
+                        <option value="today">Hari Ini</option>
+                        <option value="week">Minggu Ini</option>
+                        <option value="month">Bulan Ini</option>
+                        <option value="year">Tahun Ini</option>
+                        <option value="custom">Custom Tahun</option>
+                    </select>
+                    <div id="customYearInput" class="custom-year-input" style="display: none;">
+                        <input type="number" id="yearInput" min="2000" max="2025"
+                            placeholder="Masukkan tahun (2000-2025)">
+                        <button id="applyYear" class="apply-year-btn">Terapkan</button>
+                    </div>
+                </div>
+                <section class="comic-grid" id="comicGrid"></section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 MangUp. All rights reserved.</p>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/genre.js"></script>
+    <script src="js/random.js"></script>
+</body>
+
+</html>

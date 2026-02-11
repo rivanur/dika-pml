@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari dan Update Manga</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1>Cari dan Update Manga</h1>
+
+        <div class="admin-header">
+            <h2>Admin Dashboard</h2>
+            <div class="admin-info">
+                <span id="adminUsername">Admin</span>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari manga berdasarkan judul...">
+            <button onclick="searchManga()">Cari</button>
+        </div>
+
+        <div id="searchResults" class="manga-results"></div>
+
+        <!-- Form Edit (akan ditampilkan ketika manga dipilih) -->
+        <div id="editFormContainer" style="display: none;">
+            <h2>Edit Manga</h2>
+            <form id="editMangaForm" enctype="multipart/form-data">
+                <input type="hidden" id="editMangaId" name="id">
+
+                <div class="form-group">
+                    <label for="editTitle">Judul Manga</label>
+                    <input type="text" id="editTitle" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editAuthor">Nama Pengarang</label>
+                    <input type="text" id="editAuthor" name="author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editDescription">Deskripsi</label>
+                    <textarea id="editDescription" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editupdate_date">Tanggal Update Terbaru</label>
+                    <input type="date" id="editupdate_date" name="update_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="editReleaseDate">Tanggal Rilis</label>
+                    <input type="date" id="editReleaseDate" name="release_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Genre</label>
+                    <div class="genre-container" id="editGenreContainer">
+                        <!-- Genre akan dimuat dari database -->
+                    </div>
+                    <input type="hidden" name="genres" id="editSelectedGenres">
+                </div>
+
+                <div class="form-group">
+                    <label for="editCover">Cover Manga (Biarkan kosong jika tidak ingin mengubah)</label>
+                    <input type="file" id="editCover" name="cover" accept="image/*">
+                    <div id="currentCoverPreview"></div>
+                </div>
+
+                <h3>Karakter Utama</h3>
+                <div id="editCharacterContainer">
+                    <!-- karakter akan ditambahkan dengan JS -->
+                </div>
+                <button type="button" class="btn-add" onclick="addEditCharacter()">+ Tambah Karakter</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Simpan Perubahan</button>
+                    <button type="button" class="btn-cancel" onclick="cancelEdit()">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/search_manga.js"></script>
+</body>
+
+</html>

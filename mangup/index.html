@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="http://localhost/mangup/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangUp - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">MangUp</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="genre.html">Semua Komik</a></li>
+                <li><a href="#">Random</a></li>
+            </ul>
+        </nav>
+
+        <!-- Search bar -->
+        <div class="search-bar">
+            <form action="searchcln.html" method="get">
+                <input type="text" id="searchInput" name="q" placeholder="Cari komik...">
+            </form>
+        </div>
+    </header>
+
+    <!-- Banner Slider -->
+    <div class="banner-container">
+        <section class="banner-slider" id="bannerSlider">
+            <!-- Slides will be dynamically added here -->
+        </section>
+        <div class="slide-controls">
+            <button class="prev-btn" onclick="prevSlide()">❮ Prev</button>
+            <button class="next-btn" onclick="nextSlide()">Next ❯</button>
+        </div>
+    </div>
+
+    <!-- Konten utama -->
+    <main class="container">
+        <div class="container">
+            <h2 class="card-title">Judul Baru</h2>
+            <section class="comic-grid" id="comicGrid1"></section>
+        </div>
+
+        <div class="container">
+            <h2 class="card-title">Update Terbaru</h2>
+            <section class="comic-grid" id="comicGrid2"></section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 MangUp. All rights reserved.</p>
+    </footer>
+
+    <script src="js/banner.js"></script>
+    <script src="js/new_title.js"></script>
+    <script src="js/new_update.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/random.js"></script>
+</body>
+
+</html>

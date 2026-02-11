@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Admin</title>
+    <link rel="stylesheet" href="css/add-admin.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <h2>Tambah Admin Baru</h2>
+    <div class="admin-header">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-info">
+            <span id="adminUsername">Admin</span>
+            <button id="logoutBtn" class="btn-logout">Logout</button>
+        </div>
+    </div>
+    <form id="adminForm">
+        <div class="form-group">
+            <label for="username">Username Admin</label>
+            <input type="text" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password Admin</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Tambah Admin</button>
+    </form>
+    <br><br>
+    <a href="admin.html">
+        <button type="button" class="btn-back">Kembali ke Halaman Admin</button>
+    </a>
+
+    <script src="js/add_admin.js"></script>
+
+</body>
+
+</html>
