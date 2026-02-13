@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ardika Fatnurivan - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <h2>Ardika Fatnurivan</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <!-- Ganti dengan foto kamu -->
+                <img src="assets/images/profilsaya.jpg" alt="Ardika Fatnurivan" class="profile-photo">
+            </div>
+            <h1>Halo, Nama saya Ardika Fatnurivan</h1>
+            <p>Mahasiswa Informatika | Desainer Grafis | Web Developer</p>
+            <div class="hero-buttons">
+                <button class="cta-button"><a href="#projects">Lihat Portfolio</a></button>
+                <button class="secondary-button"><a href="#contact">Contact Saya</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Saya adalah mahasiswa Informatika yang passionate di bidang desain grafis dan pengembangan web. Saya senang menciptakan solusi digital yang estetik dan fungsional.</p>
+                    <div class="interests">
+                        <h3>Minat & Hobi:</h3>
+                        <ul>
+                            <li>🎨 Desain Grafis</li>
+                            <li>🏸 Badminton</li>
+                            <li>💻 Pemrograman</li>
+                            <li>🎬 Video Editing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Teknologi</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🛠 Design Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Adobe Illustrator</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Capcut</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">PHP</span> 
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Pengalaman & Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Sekarang</div>
+                    <div class="timeline-content">
+                        <h3>Mahasiswa Informatika</h3>
+                        <p>Universitas Amikom Purwokerto
+                        <br>IPK: 3.84
+                        <br>Semester : 5</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Anggota UKM Intermedia</h3>
+                        <p>Divisi Keilmuan Sistem Robotika Sebagai:</p>
+                        <ol>
+                            <li>Anggota Be Smart Sistem Robotika</li>
+                            <li>Anggota Divisi Lomba IIT Competition 2024</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Pengurus UKM Intermedia</h3>
+                        <p>Divisi Keilmuan Multimedia Sebagai:</p>
+                        <ol>
+                            <li>Pemateri Be Smart Multimedia</li>
+                            <li>Pengampu Kelompok 3 Multimedia pada IMAGINE 2025</li>
+                            <li>Koordinator Divisi Perlengkapan IIT Competition 2025</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Projects dengan Filter -->
+    <section id="detailed-projects" class="detailed-projects">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="project-filters">
+                <button class="filter-btn" onclick="filterProjects('all')">All Projects</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web Development</button>
+                <button class="filter-btn" onclick="filterProjects('design')">Graphic Design</button>
+                <button class="filter-btn" onclick="filterProjects('video')">Video Editing</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Projects akan di-load oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form">
+        <div class="container">
+            <h2>Hubungi Saya</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌓</button>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Project Portfolio</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Website Rekomendasi Buku</h3>
+                    <p>Desain dan development website rekomendasi buku terbaru dengan fitur lengkap sesuai dengan keinginanmu</p>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Poster Kegiatan Pemberdayaan Masyarakat</h3>
+                    <p>Desain poster untuk kegiatan pemberdayaan masyarakat</p>
+                    <div class="project-tags">
+                        <span>Canva</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Video Editing Channel YouTube Edukasi</h3>
+                    <p>Editing video edukasi di channel YouTube 'Nyolo Ilmu' untuk mendongkrak subscriber dan views</p>
+                    <div class="project-tags">
+                        <span>Canva</span>
+                        <span>Capcut</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Connect!</h2>
+            <div class="contact-links">
+                <a href="https://www.instagram.com/dikakuy37/" class="social-link">📷 Instagram</a>
+                <a href="mailto:arr44815@gmail.com" class="social-link">✉️ Email</a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="social-link">💼 LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ardika Fatnurivan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
